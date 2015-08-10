@@ -1,5 +1,28 @@
 # Diceware Passphrase Creator Changelog
 
+## v1.2.0
+###### August 9, 2015
+
+Diceware-Passphrase-Creator-1.2.0.zip
+
+SHA256: 83e90415a6669e9a97d81ddfa97dfe6410e7dc77b6e317d8d5ec38ac79b76a10
+
+- Much simpler process: choose how many words, enter the dice roll numbers, done. No need to search through the word list, the program now looks up words automatically.
+- Redesigned the large header area into a simpler menubar at the top.
+- Rearranged text: descriptions for the main steps are now shorter and easier to follow, and more detailed information is now accessible from both the top menubar and the "more info..." links throughout the main steps.
+- Renamed to "Diceware Passphrase Creator" because it's now more of a tool than an instruction guide.
+- Changed the red dice icon image from a grid of 4 dice to a single die. This fits better in the new menubar and as a favicon.
+- For Mac OS X, added the red dice icon to the file to replace the system's generic HTML document icon, making it look more like an application. The icon was compiled with [Icon Composer 2x](https://github.com/lemonmojo/IconComposer2x). This isn't possible on Windows or GNU/Linux, which can only do custom icons using separate files.
+- Changed recommended number of passphrase words from 5 to 6.
+- Changed the word count selector from a textbox to a pulldown menu to more reliably validate user input.
+- Only allow numbers 1-6 to be entered into the dice roll text box.
+- New counter shows how many remaining dice rolls are needed to get the desired number of words.
+- Simpler options for adding random numerals and special characters, as well as new capitalization and spacing options. Just check or uncheck a box to apply the option to the passphrase automatically.
+- Added icons to external links to visually differentiate them from links internal to the program.
+- Advise clearing the clipboard when finished. This prevents others from learning your passphrase if you've copied it to the clipboard.
+- Added strict [content security policy](http://content-security-policy.com/) <meta> header, allowing only inline elements and nothing external.
+- Moved the PGP signature to a detached signature file rather than in the HTML.
+
 
 ## v1.1.0
 ###### July 23, 2015
