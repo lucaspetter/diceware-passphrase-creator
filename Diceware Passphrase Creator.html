@@ -9605,8 +9605,12 @@ bgR/yfB40fA=
 					}
 					passphrase += returnRandomSpecialCharacters(1);
 				}
-				// Add a random numerals if the option checkbox is checked.
+				// Add random numerals if the option checkbox is checked.
 				if (checkboxNumerals === true) {
+					// Add a space before the numerals if the spaces option checkbox is checked.
+					if (checkboxSpaces === true) {
+						passphrase += " ";
+					}
 					passphrase += returnRandomNumbers(0, 9, 4);
 				}
 				// Hide the starting input area and show the final results area, along with the new passphrase.
