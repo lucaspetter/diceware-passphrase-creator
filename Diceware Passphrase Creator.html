@@ -9636,7 +9636,7 @@ bgR/yfB40fA=
 			
 			function generateRandomInteger(min, max) {
 				// Generate a random integer between a min and max range.
-				// Prefer using cryptographically secure window.crypto over insecure Math.random.
+				// Use cryptographically secure window.crypto.getRandomValues.
 				if (window.crypto) {
 					if (window.crypto.getRandomValues) {
 						// This part of the function modified from https://stackoverflow.com/questions/18230217/javascript-generate-a-random-number-within-a-range-using-crypto-getrandomvalues
@@ -9655,9 +9655,6 @@ bgR/yfB40fA=
 							}
 						}
 					}
-				} else if (Math.random) {
-					// If window.crypto isn't supported, fall back to using Math.random instead.
-					return Math.floor(Math.random() * (max - min + 1)) + min;
 				}
 			}
 			
