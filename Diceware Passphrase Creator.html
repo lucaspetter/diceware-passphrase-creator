@@ -18,6 +18,7 @@
 		</style>
 		<script>
 			// Detect if this page is in a frame. If not, un-hide the main user interface. If so, attempt to break out.
+			"use strict";
 			if (self === top) {
 				var antiClickjack = document.getElementById("antiClickjackStyle");
 				antiClickjack.parentNode.removeChild(antiClickjack); 
@@ -9524,6 +9525,8 @@ bgR/yfB40fA=
 		</script>
 		<script>
 			// Custom functions.
+			
+			"use strict";
 			
 			detectWindowCrypto();
 			function detectWindowCrypto() {
