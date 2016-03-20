@@ -72,6 +72,9 @@
 			a .external-link-icon {
 				color: red !important;
 			}
+			#windowCryptoWarning {
+				display: none;
+			}
 			a[href^="//"]:not(.navbar-external-link),
 			a[href^="http://"]:not(.navbar-external-link), 
 			a[href^="https://"]:not(.navbar-external-link) {
@@ -1422,11 +1425,11 @@ to permit their use in free software.</pre>
 					<div class="modal-body">
 						<p><strong>You really should try to get at least one 6-sided die.</strong> Dice can be purchased at toy stores, dollar stores, or online at <a href="http://ebay.com" target="_blank" class="alert-link">eBay</a>. They're a reliable source of true randomness.</p>
 						<p>While computers can generate pseudo-random numbers that <em>look</em> random, they may potentially be predictable in some way. You wouldn't want people to predict your passphrase, right?</p>
-						<p>If it's not possible to get dice, click the button below to have the computer generate pseudo-random numbers; however, this is not recommended for making high-security passphrases.</p>
+						<p class="requires-window-crypto">If it's not possible to get dice, click the button below to have the computer generate pseudo-random numbers; however, this is not recommended for making high-security passphrases.</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-danger" autocomplete="off" data-dismiss="modal" onclick="displayRandomNumbers(1, 6, 5, 'diceRollTextbox'); calculateDiceRollsRemaining();">Generate Pseudo-Random Dice Rolls</button>
-						<button type="button" class="btn btn-default" autocomplete="off" data-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-danger requires-window-crypto" autocomplete="off" data-dismiss="modal" onclick="displayRandomNumbers(1, 6, 5, 'diceRollTextbox'); calculateDiceRollsRemaining();">Generate Pseudo-Random Dice Rolls</button>
+						<button type="button" class="btn btn-default" autocomplete="off" data-dismiss="modal">OK</button>
 					</div>
 				</div>
 			</div>
@@ -9389,6 +9392,10 @@ bgR/yfB40fA=
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+							<div class="alert alert-info" id="windowCryptoWarning" role="alert">
+								<p><strong>Some features aren't available.</strong></p>
+								<p>You can continue using this program, but your browser doesn't support all of its features. Consider <a href="http://browsehappy.com/" target="_blank">upgrading</a> to a modern browser for more functionality.</p>
+							</div>
 							<form onsubmit="createPassphrase(); return false;" autocomplete="off">
 								<div class="form-inline">
 									<div class="form-group">
@@ -9459,19 +9466,19 @@ bgR/yfB40fA=
 													Add spaces between each word.
 												</label>
 											</div>
-											<div class="checkbox">
+											<div class="checkbox requires-window-crypto">
 												<label>
 													<input type="checkbox" id="checkboxSpecialCharacters" value="" aria-describedby="helpCheckboxNumbersCharacters" autocomplete="off" onclick="createPassphrase();">
 													Add a random special character at the end.
 												</label>
 											</div>
-											<div class="checkbox">
+											<div class="checkbox requires-window-crypto">
 												<label>
 													<input type="checkbox" id="checkboxNumerals" value="" aria-describedby="helpCheckboxNumbersCharacters" autocomplete="off" onclick="createPassphrase();">
 													Add random numerals at the end.
 												</label>
 											</div>
-											<p class="help-block" id="helpCheckboxNumbersCharacters">Numerals and special characters may not be necessary. <a href="" data-toggle="modal" data-target="#numeralsCharactersModal" class="text-nowrap">More info...</a></p>
+											<p class="help-block requires-window-crypto" id="helpCheckboxNumbersCharacters">Numerals and special characters may not be necessary. <a href="" data-toggle="modal" data-target="#numeralsCharactersModal" class="text-nowrap">More info...</a></p>
 										</div>
 									</div>
 									<div class="col-sm-5">
@@ -9517,6 +9524,19 @@ bgR/yfB40fA=
 		</script>
 		<script>
 			// Custom functions.
+			
+			detectWindowCrypto();
+			function detectWindowCrypto() {
+				// Test for cryptographically secure window.crypto.getRandomValues.
+				// If it's not supported, disable/hide features that have the class "requires-window-crypto".
+				if (!window.crypto || !window.crypto.getRandomValues) {
+					var dependentElements = document.getElementsByClassName("requires-window-crypto");
+					for (var i = 0; i < dependentElements.length; i++) {
+						dependentElements[i].style.display = "none";
+					}
+					document.getElementById("windowCryptoWarning").style.display = "block";
+				}
+			}
 			
 			function calculateDiceRollsNeeded(numberOfWords) {
 				// Calculate how many dice rolls are needed based on the desired number of passphrase words.
