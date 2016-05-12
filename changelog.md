@@ -3,7 +3,7 @@
 ## v1.2.1
 ###### May 11, 2016
 
-Diceware Passphrase Creator 1.2.1.zip
+Diceware-Passphrase-Creator-1.2.1.zip
 
 SHA512: c5aadaa30dcd4f560d572e36d8eb39e9721113a6095c1672b60e8fa0315865e64e0a5b644e873d5fac8cfbca316d31f97a775a683bbe1579e5e1c5d50d9b5dc8
 
