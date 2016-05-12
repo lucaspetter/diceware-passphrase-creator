@@ -13,7 +13,7 @@ SHA512: c5aadaa30dcd4f560d572e36d8eb39e9721113a6095c1672b60e8fa0315865e64e0a5b64
 - Add clickjacking defence by hiding the page body until we know the page is not inside a frame.
 - Enable JavaScript strict mode.
 - Update jQuery to 1.12.3.
-- Update Bootstrap to 3.36.
+- Update Bootstrap to 3.3.6.
 
 
 ## v1.2.0
