@@ -21,7 +21,7 @@ Here are some more examples of passphrases you can make using this program:
 Long, random passphrases are more secure because they're more difficult for an attacker to guess than simple passwords. While `Batman1989` is easily guessed and `&1KJl6a8y$g*01W}i21!MZ` is too hard to remember, Diceware passphrases like `ChillyDressyDataShakenCrater` are strong and memorable.
 
 ### Why use dice?
-For selecting words randomly, dice are preferred over computer-generated random numbers because they're a more reliable and transparent source of randomness. If no dice are available, try to get some. If that's not possible, the program can generate pseudo-random dice instead, although dice are recommended.
+For selecting words randomly, dice are preferred over computer-generated random numbers because they're a more reliable and transparent source of randomness. If no dice are available, try to get some. If that's not possible, the program can generate pseudo-random numbers instead, although dice are recommended.
 
 ### Easy to share and safe to use
 The program is designed as a self-contained webpage: it's a single file that doesn't load any external content, which means it's not only safe and private, but also highly compatible and easy to share. Email it to all your friends! You can even use it offline – simply save it on your hard drive and use it whenever a new passphrase is needed.
@@ -41,7 +41,7 @@ Anyone is welcome to help build this program. Together, we can make it even bett
 By submitting changes, you agree to licence your work under the [GNU General Public License](https://www.gnu.org/licenses/gpl.html), version 3 or later.
 
 ## Licences
-Diceware Passphrase Creator is copyright © 2015 [Lucas Bleackley Petter](https://www.lucaspetter.com).
+Diceware Passphrase Creator is copyright © 2016 [Lucas Bleackley Petter](https://www.lucaspetter.com).
 
 Diceware Passphrase Creator is free software: you can redistribute it and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl.html) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -51,12 +51,12 @@ Permission is also granted to copy, distribute and/or modify the documentation c
 
 ### Elements and software libraries used in Diceware Passphrase Creator
 
-[Bootstrap](http://getbootstrap.com/) is copyright © 2011-2015 Twitter, Inc., licenced under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE).
+[Bootstrap](https://getbootstrap.com/) is copyright © 2011-2015 Twitter, Inc., licenced under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE).
 
 The [English Diceware Wordlist](http://world.std.com/~reinhold/diceware.html) is copyright © 1995-2015 Arnold G. Reinhold, licenced under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) licence.
 
 "external-link-ltr-icon.svg" is part of [MediaWiki](https://www.mediawiki.org/), copyright © 2015 MediaWiki collaborators, licenced under the [GNU GPL 2.0](https://www.mediawiki.org/wiki/Download) licence.
 
-[jQuery](https://jquery.com/) is copyright © 2005-2015 jQuery Foundation, Inc., licenced under the [MIT License](https://jquery.org/license/).
+[jQuery](https://jquery.com/) is copyright © 2005-2016 jQuery Foundation, Inc., licenced under the [MIT License](https://jquery.org/license/).
 
 [normalize.css](https://necolas.github.io/normalize.css/) is copyright © 2012-2015 Nicolas Gallagher, licenced under the [MIT License](https://github.com/necolas/normalize.css/blob/master/LICENSE.md).
