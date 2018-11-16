@@ -1,3 +1,7 @@
+# :warning: NOTICE: This program is deprecated. Please see [DicePhrase](https://github.com/DicePhrase/dicephrase) for the latest version.
+
+---
+
 # Diceware Passphrase Creator
 
 ![Diceware Passphrase Creator](images/icon/icon-128.png)
